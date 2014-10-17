@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0.0" method="upgrade">
+	<name>COM_MEDIADATEN</name>
+	<creationDate>2014-10-07</creationDate>
+	<author>continga</author>
+	<authorEmail>info@continga.de</authorEmail>
+	<copyright>Copyright(C) 2014 continga. All rights reserved</copyright>
+	<license>License Info</license>
+	<version>1.0.0</version>
+	<description>Beschreibung</description>
+
+	<install>
+		<sql>
+		<file driver="mysql" charset="utf8">sql/install/mysql/install.sql</file>
+		<file driver="mysql">sql/install/mysql/install.sql</file>
+		<file driver="mysqli" charset="utf8">sql/install/mysql/install.sql</file>
+		<file driver="mysqli">sql/install/mysql/install.sql</file>
+		</sql>
+	</install>
+
+	<uninstall>
+		<sql>
+		<file driver="mysql" charset="utf8">sql/install/mysql/uninstall.sql</file>
+		<file driver="mysql">sql/install/mysql/uninstall.sql</file>
+		<file driver="mysqli" charset="utf8">sql/install/mysql/uninstall.sql</file>
+		<file driver="mysqli">sql/install/mysql/uninstall.sql</file>
+		</sql>
+	</uninstall>
+
+	<update>
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+	<!--
+	<files folder="site">
+			<folder>controllers</folder>
+			<folder>languages</folder>
+			<folder>models</folder>
+			<folder>views</folder>
+
+			<filename>index.html</filename>
+			<filename>mediadaten.php</filename>
+			<filename>dispatcher.php</filename>
+	</files>
+
+
+	<languages folder="site">
+		<language tag="en-GB">languages/en-GB/en-GB.com_mediadaten.ini</language>
+	</languages>-->
+
+	<administration>
+		<!--<menu view="cpanel">com_mediadaten</menu>-->
+		<menu>COM_MEDIADATEN</menu>
+		<menu 
+			link="option=com_mediadaten&amp;view=customers" 
+			view="customers" 
+			>COM_CONFERENCE_TITLE_CUSTOMERS</menu>
+
+		<files folder="admin">
+			<!--<folder>controllers</folder>
+			<folder>helpers</folder>
+			
+			<folder>models</folder>-->
+			<folder>sql</folder>
+			<folder>views</folder>
+			<folder>languages</folder>
+			
+			<!--<filename>dispatcher.xml</filename>-->
+			<filename>dispatcher.php</filename>
+			<filename>mediadaten.php</filename>
+			<!--<filename>script.mediadaten.php</filename>
+			<filename>toolbar.php</filename>
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>-->
+		</files>
+
+
+		<!-- Installation / uninstallation script file 
+		<scriptfile>script.mediadaten.php</scriptfile> -->
+
+	</administration>
+</extension>
