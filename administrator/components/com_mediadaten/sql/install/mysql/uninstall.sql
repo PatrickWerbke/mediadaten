@@ -1,4 +1,4 @@
-
+ -- Uninstall
 DROP TABLE IF EXISTS `ad_discount`;
 DROP TABLE IF EXISTS `ad`;
 DROP TABLE IF EXISTS `customer`;

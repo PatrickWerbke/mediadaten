@@ -1,5 +1,5 @@
 <?php
-/**
+/*
  * @package		Mediadaten Manager
  * @license		GNU General Public License version 3 or later
  */

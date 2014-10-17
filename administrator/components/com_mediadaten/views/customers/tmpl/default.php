@@ -11,7 +11,7 @@ defined('_JEXEC') or die;
 /*
 $this->loadHelper('params');
 $this->loadHelper('select');
-$this->loadHelper('format');
+$this->loadHelper('format');  
 */
 // Sorting filters
 

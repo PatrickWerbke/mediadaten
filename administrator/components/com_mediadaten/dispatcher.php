@@ -11,6 +11,7 @@ class MediadatenDispatcher extends FOFDispatcher
 {
 	public $defaultView = 'customers';
 	/*
+	 *
 	public function onBeforeDispatch() {
 		$result = parent::onBeforeDispatch();
 		

@@ -76,8 +76,8 @@
 		</files>
 
 
-		<!-- Installation / uninstallation script file 
-		<scriptfile>script.mediadaten.php</scriptfile> -->
+		<!-- Installation / uninstallation script file -->
+		<!--<scriptfile>script.mediadaten.php</scriptfile> -->
 
 	</administration>
 </extension>
