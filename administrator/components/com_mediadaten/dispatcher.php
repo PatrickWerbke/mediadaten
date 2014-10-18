@@ -9,9 +9,8 @@ defined('_JEXEC') or die;
 
 class MediadatenDispatcher extends FOFDispatcher
 {
-	public $defaultView = 'customers';
-	/*
-	 *
+	public $defaultView = 'customer';
+	
 	public function onBeforeDispatch() {
 		$result = parent::onBeforeDispatch();
 		
@@ -27,5 +26,5 @@ class MediadatenDispatcher extends FOFDispatcher
 		}
 		
 		return $result;
-	} */
+	} 
 }

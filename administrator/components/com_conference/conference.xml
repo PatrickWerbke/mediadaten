@@ -10,9 +10,19 @@
 	<version>0.9.8-beta2</version>
 	<description>Conference Schedule Manager for Joomla</description>
 
+	<!-- Public front end files -->
+	<files folder="frontend">
+		<filename>index.html</filename>
+		<filename>conference.php</filename>
+		<filename>dispatcher.php</filename>
+		<filename>router.php</filename>
+		
+		<folder>controllers</folder>
+		<folder>helpers</folder>
+		<folder>views</folder>
+	</files>
 
 	<!-- Front end translation files -->
-	<!--
 	<languages folder="language/frontend">
 		<language tag="en-GB">en-GB/en-GB.com_conference.ini</language>
 		<language tag="nl-NL">nl-NL/nl-NL.com_conference.ini</language>
@@ -45,16 +55,22 @@
 		</schemas>
 	</update>
 
+	<!-- Media files -->
+	<media destination="com_conference" folder="media">
+		<folder>css</folder>
+		<folder>fonts</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+	</media>
 
 	<!-- Administrator back-end section -->
 	<administration>
 		<!-- Administration menu -->
 		<menu>COM_CONFERENCE</menu>
 		<menu 
-			link="option=com_conference&amp;view=speakers" 
-			view="speakers" 
-			>COM_CONFERENCE_TITLE_SPEAKERS</menu>
-		<!--
+			link="option=com_conference&amp;view=sessions" 
+			view="sessions" 
+			>COM_CONFERENCE_TITLE_SESSIONS</menu>
 		<menu 
 			link="option=com_conference&amp;view=speakers" 
 			view="speakers"
@@ -78,17 +94,17 @@
 
 		<!-- Back-end files -->
 		<files folder="backend">
-			<!--<filename>access.xml</filename>-->
+			<filename>access.xml</filename>
 			<filename>conference.php</filename>
-			<!--<filename>config.xml</filename>-->
+			<filename>config.xml</filename>
 			<filename>dispatcher.php</filename>
-			<!--<filename>index.html</filename>
-			<filename>toolbar.php</filename>-->
+			<filename>index.html</filename>
+			<filename>toolbar.php</filename>
 
-			<!--<folder>helpers</folder>
-			<folder>models</folder>-->
+			<folder>helpers</folder>
+			<folder>models</folder>
 			<folder>sql</folder>
-			<!--<folder>tables</folder>-->
+			<folder>tables</folder>
 			<folder>views</folder>
 		</files>
 
@@ -103,6 +119,6 @@
 	</administration>
 
 	<!-- Installation / uninstallation script file -->
-	<!--<scriptfile>script.conference.php</scriptfile> -->
+	<scriptfile>script.conference.php</scriptfile>
 
 </extension>

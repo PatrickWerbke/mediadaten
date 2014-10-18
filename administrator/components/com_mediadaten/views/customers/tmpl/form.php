@@ -7,7 +7,7 @@
 //No direct access.
 
 defined('_JEXEC') or die;
-/*
+
 JHTML::_('behavior.tooltip');
 if(version_compare(JVERSION, '3.0', 'ge')) {
 	JHTML::_('behavior.framework');
@@ -59,11 +59,11 @@ $script[] = '	}';
 
 // Add the script to the document head.
 JFactory::getDocument()->addScriptDeclaration(implode("\n", $script));
-/*
+
 $this->loadHelper('params');
 $this->loadHelper('select');
 $this->loadHelper('format');
-*/
+
 // Joomla! editor object
 
 //$editor = JFactory::getEditor();
@@ -74,6 +74,8 @@ $this->loadHelper('format');
 <div class="mediadaten">
 	<form action="index.php" method="post" name="adminForm" id="adminForm" class="form form-horizontal">
 	<input type="hidden" name="option" value="com_mediadaten" />
+	<input type="hidden" name="view" value="customers" />
+	<input type="hidden" name="task" value="" />
 
 	<!-- Start row -->
 	<div class="row-fluid">
@@ -85,10 +87,10 @@ $this->loadHelper('format');
 					<?php echo JText::_('COM_MEDIADATEN_FIELD_NUMBER') ?>
 				</label>
 				<div class="controls">
-					<input type="text" name="number" id="number" class="span" value="<?php echo $this->item->title?>"/>
+					<input type="text" name="number" id="number" class="span" />
 				</div>	
 			</div>
-			<!--
+			
 			<div class="control-group">
 				<label for="name" class="control-label">
 					<?php echo JText::_('COM_MEDIADATEN_FIELD_NAME') ?>
@@ -115,7 +117,7 @@ $this->loadHelper('format');
 					<input type="checkbox" checked="checked" name="active" id="active"  />
 				</div>	
 			</div>
-		</div>-->
+		</div>
 
 	</div>
 	</form>

@@ -9,19 +9,19 @@
 defined('_JEXEC') or die;
 
 // Load the helpers
-/*
+
 $this->loadHelper('params');
 $this->loadHelper('select');
 $this->loadHelper('format');
-*/
+
 // Sorting filters
 
-$sortFields = array(
-	'enabled' 				=> JText::_('JPUBLISHED'),
-	'title'					=> JText::_('COM_CONFERENCE_FIELD_NAME'),
+//$sortFields = array(
+	//'enabled' 				=> JText::_('JPUBLISHED'),
+	//'title'					=> JText::_('COM_CONFERENCE_FIELD_NAME'),
 	//'event'					=> JText::_('COM_CONFERENCE_FIELD_EVENT'),
 	//'modified_on'			=> JText::_('JGLOBAL_FIELD_MODIFIED_LABEL'),
-);
+//);
 
 //JHtml::_('bootstrap.tooltip');
 //JHtml::_('bootstrap.popover');

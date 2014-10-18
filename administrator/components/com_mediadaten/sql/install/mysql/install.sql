@@ -11,7 +11,7 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 -- -----------------------------------------------------
 -- Table `ad_discount`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `ad_discount` (
+CREATE TABLE IF NOT EXISTS `#__mediadaten_ad_discount` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `occupancy` INT NULL,
   `year` CHAR(1) NULL,
@@ -28,7 +28,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `ad`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `ad` (
+CREATE TABLE IF NOT EXISTS `#__mediadaten_ad` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `number` VARCHAR(45) NOT NULL,
   `price` DECIMAL(10,2) NULL,
@@ -57,7 +57,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `customer`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `customer` (
+CREATE TABLE IF NOT EXISTS `#__mediadaten_customer` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `number` VARCHAR(45) NOT NULL,
   `name` VARCHAR(45) NULL,
@@ -75,7 +75,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `address_type`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `address_type` (
+CREATE TABLE IF NOT EXISTS `#__mediadaten_address_type` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NULL,
   `created` DATETIME NULL,
@@ -90,7 +90,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `address`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `address` (
+CREATE TABLE IF NOT EXISTS `#__mediadaten_address` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `number` VARCHAR(45) NOT NULL,
   `street` VARCHAR(255) NULL,
@@ -124,7 +124,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `offer`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `offer` (
+CREATE TABLE IF NOT EXISTS `#__mediadaten_offer` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `number` VARCHAR(45) NULL,
   `deadline` DATETIME NULL,
@@ -149,7 +149,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `order`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `order` (
+CREATE TABLE IF NOT EXISTS `#__mediadaten_order` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `number` VARCHAR(45) NOT NULL,
   `deadline` DATE NULL,
@@ -187,7 +187,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `order_position`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `order_position` (
+CREATE TABLE IF NOT EXISTS `#__mediadaten_order_position` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `order_id` INT NOT NULL,
   `number` VARCHAR(45) NOT NULL,
@@ -220,7 +220,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `invoice`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `invoice` (
+CREATE TABLE IF NOT EXISTS `#__mediadaten_invoice` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `number` VARCHAR(45) NOT NULL,
   `exhortation` VARCHAR(45) NULL,
@@ -243,7 +243,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `offer_position`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `offer_position` (
+CREATE TABLE IF NOT EXISTS `#__mediadaten_offer_position` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `number` VARCHAR(45) NOT NULL,
   `describtion` TEXT NULL,

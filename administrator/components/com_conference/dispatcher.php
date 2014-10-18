@@ -12,7 +12,7 @@ class ConferenceDispatcher extends FOFDispatcher
 {
 	public $defaultView = 'speakers';
 	
-	/*
+	
 	public function onBeforeDispatch() {
 		$result = parent::onBeforeDispatch();
 		
@@ -29,11 +29,11 @@ class ConferenceDispatcher extends FOFDispatcher
 			AkeebaStrapper::bootstrap();
 			AkeebaStrapper::addCSSfile('media://com_conference/css/backend.css');
 			AkeebaStrapper::addCSSfile('media://com_conference/css/frontend.css');
-			*/ /*
+			*/ 
 			JHTML::_('formbehavior.chosen', 'select');
 
 		}
 		
 		return $result;
-	}*/
+	}
 }

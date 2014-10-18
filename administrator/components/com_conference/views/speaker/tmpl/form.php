@@ -8,7 +8,7 @@
 // No direct access.
 defined('_JEXEC') or die;
 
-/*
+
 JHTML::_('behavior.tooltip');
 if(version_compare(JVERSION, '3.0', 'ge')) {
 	JHTML::_('behavior.framework');
@@ -17,7 +17,7 @@ if(version_compare(JVERSION, '3.0', 'ge')) {
 }
 JHTML::_('behavior.modal');
 
-/*
+
 // Build the script.
 $script = array();
 $script[] = '	function jInsertFieldValue(value, id) {';
@@ -60,11 +60,11 @@ $script[] = '	}';
 
 // Add the script to the document head.
 JFactory::getDocument()->addScriptDeclaration(implode("\n", $script));
-/*
+
 $this->loadHelper('params');
 $this->loadHelper('select');
 $this->loadHelper('format');
-*/
+
 // Joomla! editor object
 //$editor = JFactory::getEditor();
 
@@ -73,10 +73,10 @@ $this->loadHelper('format');
 <div class="conference">
 	<form action="index.php" method="post" name="adminForm" id="adminForm" class="form form-horizontal">
 		<input type="hidden" name="option" value="com_conference" />
-		<!--<input type="hidden" name="view" value="speaker" />
+		<<input type="hidden" name="view" value="speaker" />
 		<input type="hidden" name="task" value="" />
 		<input type="hidden" name="conference_speaker_id" value="<?php echo $this->item->conference_speaker_id ?>" />
-		<input type="hidden" name="<?php echo JFactory::getSession()->getFormToken();?>" value="1" /> -->
+		<input type="hidden" name="<?php echo JFactory::getSession()->getFormToken();?>" value="1" /> 
 		
 		<!-- Start row -->
 		<div class="row-fluid">
@@ -330,3 +330,4 @@ window.addEvent("domready", function() {
 	});
 });
 </script> -->
+*/
