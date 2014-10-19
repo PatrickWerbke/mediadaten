@@ -81,8 +81,8 @@ CREATE TABLE IF NOT EXISTS `#__mediadaten_customers` (
   `created_by` INT NULL,
   `modified` DATETIME NULL,
   `modified_by` INT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE INDEX `id_UNIQUE` (`id` ASC))
+  PRIMARY KEY (`mediadaten_customer_id`),
+  UNIQUE INDEX `id_UNIQUE` (`mediadaten_customer_id` ASC))
 ENGINE = InnoDB;
 
 
