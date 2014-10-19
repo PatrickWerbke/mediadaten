@@ -8,7 +8,7 @@
 // No direct access.
 defined('_JEXEC') or die;
 
-class ConferenceHelperSelect
+class MediadatenHelperSelect
 {
 	protected static function genericlist($list, $name, $attribs, $selected, $idTag)
 	{
@@ -40,27 +40,27 @@ class ConferenceHelperSelect
 		return self::genericlist($options, $id, $attribs, $selected, $id);
 	}
 
-		public static function events($selected = null, $id = 'mediadaten_event_id', $attribs = array('class' => 'chosen'))
+		public static function customers($selected = null, $id = 'mediadaten_customer_id', $attribs = array('class' => 'chosen'))
 	{
-		$model = FOFModel::getTmpInstance('Events','ConferenceModel');
+		$model = FOFModel::getTmpInstance('customers','MediadatenModel');
 		$items = $model->savestate(0)->limit(0)->limitstart(0)->getItemList();
 		
 		$options = array();
 		
-		$options[] = JHTML::_('select.option','',JText::_('COM_MEDIADATEN_SELECT_EVENT'));
+		$options[] = JHTML::_('select.option','',JText::_('COM_MEDIADATEN_SELECT_CUSTONER'));
 
 		if(count($items)) foreach($items as $item)
 		{
-			$options[] = JHTML::_('select.option',$item->mediadaten_event_id, $item->title);
+			$options[] = JHTML::_('select.option',$item->mediadaten_customer_id, $item->title);
 		}
 
 		return self::genericlist($options, $id, $attribs, $selected, $id);
 	}
 
 
-	public static function multi_events($selected = null, $name = 'mediadaten_event_id[]', $attribs = array('multiple' => 'multiple', 'class' => 'chosen'))
+	public static function multi_events($selected = null, $name = 'mediadaten_customer_id[]', $attribs = array('multiple' => 'multiple', 'class' => 'chosen'))
 	{
-		$list = FOFModel::getTmpInstance('Events','ConferenceModel')
+		$list = FOFModel::getTmpInstance('customers','MediadatenModel')
 			->savestate(0)
 			->filter_order('ordering')
 			->filter_order_Dir('ASC')
@@ -70,10 +70,10 @@ class ConferenceHelperSelect
 		
 		$options   = array();
 		
-		$options[] = JHTML::_('select.option','',JText::_('COM_MEDIADATEN_SELECT_EVENT'));
+		$options[] = JHTML::_('select.option','',JText::_('COM_MEDIADATEN_SELECT_CUSTONER'));
 	
 		foreach($list as $item) {
-			$options[] = JHTML::_('select.option',$item->mediadaten_event_id,$item->title);
+			$options[] = JHTML::_('select.option',$item->mediadaten_customer_id,$item->title);
 		}
 		
 		return self::genericlist($options, $name, $attribs, $selected, $name);

@@ -7,7 +7,7 @@
 // No direct access.
 defined('_JEXEC') or die;
 
-class ConferenceHelperParams
+class MediadatenHelperParams
 {
 	public static function getParam($key, $default = null)
 	{

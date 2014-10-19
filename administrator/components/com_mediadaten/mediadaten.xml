@@ -53,16 +53,16 @@
 		<!--<menu view="cpanel">com_mediadaten</menu>-->
 		<menu>COM_MEDIADATEN</menu>
 		<menu 
-			link="option=com_mediadaten&amp;view=customer" 
-			view="customer" 
-			>COM_CONFERENCE_TITLE_CUSTOMER</menu>
+			link="option=com_mediadaten&amp;view=customers" 
+			view="customers" 
+			>COM_MEDIADATEN_TITLE_CUSTOMER</menu>
 
 		<files folder="admin">
 			<!--<folder>controllers</folder>
 			<folder>helpers</folder>
 			
 			<folder>models</folder>-->
-			<folder>helerps</folder>
+			<folder>helpers</folder>
 			<folder>sql</folder>
 			<folder>views</folder>
 			<folder>languages</folder>

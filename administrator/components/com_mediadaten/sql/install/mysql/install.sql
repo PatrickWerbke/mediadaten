@@ -71,6 +71,20 @@ CREATE TABLE IF NOT EXISTS `#__mediadaten_customer` (
   UNIQUE INDEX `id_UNIQUE` (`id` ASC))
 ENGINE = InnoDB;
 
+CREATE TABLE IF NOT EXISTS `#__mediadaten_customers` (
+  `mediadaten_customer_id` INT NOT NULL AUTO_INCREMENT,
+  `number` VARCHAR(45) NOT NULL,
+  `name` VARCHAR(45) NULL,
+  `first_name` VARCHAR(45) NULL,
+  `active` TINYINT(1) NULL,
+  `created` DATETIME NULL,
+  `created_by` INT NULL,
+  `modified` DATETIME NULL,
+  `modified_by` INT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `id_UNIQUE` (`id` ASC))
+ENGINE = InnoDB;
+
 
 -- -----------------------------------------------------
 -- Table `address_type`

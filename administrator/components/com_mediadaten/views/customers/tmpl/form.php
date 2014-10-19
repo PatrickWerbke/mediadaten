@@ -48,15 +48,6 @@ $script[] = '			} ';
 $script[] = '		} ';
 $script[] = '	}';
 
-$script[] = '	function jMediaRefreshPreviewTip(tip)';
-$script[] = '	{';
-$script[] = '		tip.setStyle("display", "block");';
-$script[] = '		var img = tip.getElement("img.media-preview");';
-$script[] = '		var id = img.getProperty("id");';
-$script[] = '		id = id.substring(0, id.length - "_preview".length);';
-$script[] = '		jMediaRefreshPreview(id);';
-$script[] = '	}';
-
 // Add the script to the document head.
 JFactory::getDocument()->addScriptDeclaration(implode("\n", $script));
 
@@ -77,6 +68,9 @@ $this->loadHelper('format');
 	<input type="hidden" name="view" value="customers" />
 	<input type="hidden" name="task" value="" />
 
+	<input type="hidden" name="mediadaten_customer_id" value="<?php echo $this->item->mediadaten_customer_id ?>" />
+	<input type="hidden" name="<?php echo JFactory::getSession()->getFormToken();?>" value="1" />
+		
 	<!-- Start row -->
 	<div class="row-fluid">
 		<!-- Start left -->
@@ -102,7 +96,7 @@ $this->loadHelper('format');
 
 			<div class="control-group">
 				<label for="firstname" class="control-label">
-					<?php echo JText::_('COM_MEDIADATEN_FIELD_NUMBER') ?>
+					<?php echo JText::_('COM_MEDIADATEN_FIELD_FIRSTNAME') ?>
 				</label>
 				<div class="controls">
 					<input type="text" name="firstname" id="firstname" />

@@ -15,13 +15,13 @@ $this->loadHelper('format');
 
 // Sorting filters
 
-sortFields = array(
+$sortFields = array(
 	'active' 				=> JText::_('JPUBLISHED'),
 	'name'					=> JText::_('COM_MEDIADATEN_FIELD_NAME'),
 	'number'				=> JText::_('JGLOBAL_FIELD_MODIFIED_LABEL'),
 );
 
-//JHtml::_('bootstrap.tooltip');
+JHtml::_('bootstrap.tooltip');
 JHtml::_('bootstrap.popover');
 ?>
 
@@ -47,8 +47,9 @@ JHtml::_('bootstrap.popover');
 <div class="mediadaten">
 	<form name="adminForm" id="adminForm" action="index.php" method="post">
 		<input type="hidden" name="option" id="option" value="com_mediadaten" />
-		<input type="hidden" name="view" id="view" value="customer" />
+		<input type="hidden" name="view" id="view" value="customers" />
 		<input type="hidden" name="task" id="task" value="browse" />
+
 
 		<table class="adminlist table table-striped">
 			<thead>
@@ -57,18 +58,25 @@ JHtml::_('bootstrap.popover');
 				<?php foreach ($this->items as $item) : ?>
 				<?php
 					$i++; $m = 1-$m;
-					$checkedOut = ($item->locked_by != 0);
+					//$checkedOut = ($item->locked_by != 0);
 					$ordering = $this->lists->order == 'ordering';
-					$item->published = $item->enabled;
+					$item->published = $item->active;
 				?>
 
 			<tr class="<?php echo 'row'.$m; ?>">
 					<td>
-						<?php echo JHTML::_('grid.id', $i, $item->mediadaten_customer_id, $checkedOut); ?>
+						<?php echo JHTML::_('grid.id', $i, $item->mediadaten_customer_id/*, $checkedOut*/); ?>
 					</td>
 					<td class="center">
 						<?php echo JHTML::_('jgrid.published', $item->active, $i); ?>
 					</td>
+
+					<td align="left">					
+						<a href="<?php echo JRoute::_('index.php?option=com_mediadaten&view=customers&id='.$item->mediadaten_customer_id) ?>" class="mediadatenitem">
+							<strong><?php echo $this->escape($item->name) ?></strong>
+						</a><br/>
+					</td>
+
 
 				<?php endforeach; ?>
 

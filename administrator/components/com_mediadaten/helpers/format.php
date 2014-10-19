@@ -7,7 +7,7 @@
 // No direct access.
 defined('_JEXEC') or die;
 
-class ConferenceHelperFormat
+class MediadatenHelperFormat
 {
 	
 	public static function search($title)
